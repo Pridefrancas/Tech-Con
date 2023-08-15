@@ -20,7 +20,9 @@ jobs:
       - name: Check workspace contents
         run: |
           ls -R
-
-      - name: Deploy
-        run: aws s3 sync ./ s3://${{secrets.AWS_S3_DEPLOY}} --delete
+          ls .
+          ls
+          ls -l
+      # - name: Deploy
+      #   run: aws s3 sync ./ s3://${{secrets.AWS_S3_DEPLOY}} --delete
 
