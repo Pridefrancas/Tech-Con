@@ -20,14 +20,6 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
   
-    - name: Check workspace ls -R
-      run: ls -R
-
-    - name: Check workspace ls .
-      run: ls .
-
-    - name: Check workspace ls -l
-      run: ls -l
-      # - name: Deploy
-      #   run: aws s3 sync ./ s3://${{secrets.AWS_S3_DEPLOY}} --delete
+    - name: Deploy
+      run: aws s3 sync ./ s3://${{secrets.AWS_S3_DEPLOY}} --delete
 
